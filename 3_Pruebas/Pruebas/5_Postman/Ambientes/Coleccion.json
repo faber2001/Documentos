@@ -1,0 +1,3725 @@
+{
+	"info": {
+		"_postman_id": "2780448d-7dc3-4d06-9627-76b040b5a18c",
+		"name": "All",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42993756",
+		"_collection_link": "https://bbp333.postman.co/workspace/BBP-Workspace~b9c1a3e6-72c6-4da2-9469-343c89e549a4/collection/42993756-2780448d-7dc3-4d06-9627-76b040b5a18c?action=share&source=collection_link&creator=42993756"
+	},
+	"item": [
+		{
+			"name": "Answers",
+			"item": [
+				{
+					"name": "Get All Answers",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{host}}:{{port}}/api/v1/admin/answer",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"answer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Answer By Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{host}}:{{port}}/api/v1/admin/answer/{{idAnswer}}",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"answer",
+								"{{idAnswer}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Answer By Question Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{host}}:{{port}}/api/v1/admin/answer/question/{{idQuestion}}",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"answer",
+								"question",
+								"{{idQuestion}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Answer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"respuesta\": \"prueba\",\r\n  \"enabled\": true,\r\n  \"questions\": []\r\n}   ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{host}}:{{port}}/api/v1/admin/answer",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"answer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change Enabled Answer",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"enabled\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{host}}:{{port}}/api/v1/admin/answer/enabled/{{idAnswer}}",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"answer",
+								"enabled",
+								"{{idAnswer}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Answer",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"respuesta\": \"prueba\",\r\n  \"enabled\": true,\r\n  \"questions\": [\r\n    1,2\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{host}}:{{port}}/api/v1/admin/answer/modificar/{{idAnswer}}",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"answer",
+								"modificar",
+								"{{idAnswer}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Entity Cgr",
+			"item": [
+				{
+					"name": "Get All Entities",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{host}}:{{port}}/api/v1/entityCgr/getAllEntities",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"entityCgr",
+								"getAllEntities"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Entity By Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{host}}:{{port}}/api/v1/entityCgr/getEntitiesByid/{{entityId}}",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"entityCgr",
+								"getEntitiesByid",
+								"{{entityId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Entity By Filter Name",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Ministerio\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{host}}:{{port}}/api/v1/entityCgr/filter",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"entityCgr",
+								"filter"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Entity",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Entidad Prueba\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{host}}:{{port}}/api/v1/entityCgr/createEntities",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"entityCgr",
+								"createEntities"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Entity",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Prueba\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{host}}:{{port}}/api/v1/entityCgr/updateEntities/{{entityId}}",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"entityCgr",
+								"updateEntities",
+								"{{entityId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Entity",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://{{host}}:{{port}}/api/v1/entityCgr/{{entityId}}",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"entityCgr",
+								"{{entityId}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n     \"sAMAccountName\": \"bbp.cgr\",\r\n     \"password\": \"Colombia2024*\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{host}}:{{port}}/api/v1/auth/login",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Service Health",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{host}}:{{port}}/api/v1/auth/health",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"health"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Forms",
+			"item": [
+				{
+					"name": "Get Form By Rol Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{host}}:{{port}}/api/v1/admin/form/{{formRoleId}}",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"form",
+								"{{formRoleId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Form",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"formName\": \"Prueba\",\r\n  \"roleFormId\": 11,\r\n  \"enabled\": true,\r\n  \"idQuestions\": [\r\n    1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29.30\r\n  ],\r\n  \"idAnswers\": [\r\n    1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2\r\n  ],\r\n  \"idQuestionsWithComment\": [\r\n    1,4,7,9,15\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{host}}:{{port}}/api/v1/admin/form",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"form"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Form",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"formName\": \"Prueba\",\r\n  \"roleFormId\": 11,\r\n  \"enabled\": true,\r\n  \"idQuestions\": [\r\n    1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29.30\r\n  ],\r\n  \"idAnswers\": [\r\n    1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2\r\n  ],\r\n  \"idQuestionsWithComment\": [\r\n    1,4,7,9,15\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{host}}:{{port}}/api/v1/admin/form/modificar/{{formId}}",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"form",
+								"modificar",
+								"{{formId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change Enabled Form",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"enabled\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{host}}:{{port}}/api/v1/admin/form/enabled/{{formId}}",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"form",
+								"enabled",
+								"{{formId}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Forms Questions",
+			"item": [
+				{
+					"name": "Get All Questions",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{host}}:{{port}}/api/v1/admin/question",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"question"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Static Questions",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{host}}:{{port}}/api/v1/admin/question/static",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"question",
+								"static"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Question",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"enunciado\": \"Prueba2\",\r\n  \"tipoPregunta\": \"selección múltiple\",\r\n  \"enabled\": true,\r\n  \"peso\": 5,\r\n  \"solution\": true,\r\n  \"forms\": [\r\n    20,21,22\r\n  ],\r\n  \"answers\": [\r\n    1,2\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{host}}:{{port}}/api/v1/admin/question",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"question"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Question",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"enunciado\": \"Prueba\",\r\n  \"tipoPregunta\": \"selección múltiple\",\r\n  \"enabled\": true,\r\n  \"peso\": 5,\r\n  \"solution\": true,\r\n  \"forms\": [\r\n    1,2\r\n  ],\r\n  \"answers\": [\r\n    1,2\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{host}}:{{port}}/api/v1/admin/question/{{questionId}}",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"question",
+								"{{questionId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change Enabled Question",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"enabled\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{host}}:{{port}}/api/v1/admin/questionall/enabled/{{questionId}}",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"questionall",
+								"enabled",
+								"{{questionId}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Forms QuestionsAll",
+			"item": [
+				{
+					"name": "Get All Questions",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{host}}:{{port}}/api/v1/admin/questionall",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"questionall"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Static Questions",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{host}}:{{port}}/api/v1/admin/questionall/static",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"questionall",
+								"static"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Question Answers",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{host}}:{{port}}/api/v1/admin/questionall/{{questionId}}/answers",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"questionall",
+								"{{questionId}}",
+								"answers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Question By Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{host}}:{{port}}/api/v1/admin/questionall/{{questionId}}",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"questionall",
+								"{{questionId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Question",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"enunciado\": \"Prueba\",\r\n  \"tipoPregunta\": \"selección múltiple\",\r\n  \"enabled\": true,\r\n  \"peso\": 5,\r\n  \"solution\": true,\r\n  \"forms\": [\r\n    20,21,22\r\n  ],\r\n  \"answers\": [\r\n    1,2\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{host}}:{{port}}/api/v1/admin/questionall",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"questionall"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Question",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"enunciado\": \"Prueba pregunta\",\r\n  \"tipoPregunta\": \"selección múltiple\",\r\n  \"enabled\": true,\r\n  \"peso\": 5,\r\n  \"solution\": true,\r\n  \"forms\": [\r\n    1,2\r\n  ],\r\n  \"answers\": [\r\n    1,2\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{host}}:{{port}}/api/v1/admin/questionall/{{questionId}}",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"questionall",
+								"{{questionId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change Enabled Question",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"enabled\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{host}}:{{port}}/api/v1/admin/questionall/enabled/{{questionId}}",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"questionall",
+								"enabled",
+								"{{questionId}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Prácticas",
+			"item": [
+				{
+					"name": "Get All Prácticas",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{host}}:{{port}}/api/v1/resume/getIdentity",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"resume",
+								"getIdentity"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Práctica By Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{host}}:{{port}}/api/v1/resume/getIdentity/{{identityId}}",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"resume",
+								"getIdentity",
+								"{{identityId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Types",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{host}}:{{port}}/api/v1/resume/getAllTypes",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"resume",
+								"getAllTypes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Archivo Práctica By Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{host}}:{{port}}/api/v1/resume/file/{{fileIdId}}",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"resume",
+								"file",
+								"{{fileIdId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Práctica Applying Filters",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fechaDiligenciamiento\": \"2025-02-03 00:00:00\",\r\n    \"nombreEntidad\": \"Contraloría General de la República\",\r\n    \"nombre\": \"practica prueba evaluador\",\r\n    \"tipoEstrategiaIdentificacion\": \"Identificación por Asesoria\",\r\n    \"tipoPractica\": \"Buena Práctica-BP\",\r\n    \"codigoPractica\": \"BP-0181\",\r\n    \"rol\": \"administrador\",\r\n    \"sAMAccountName\": \"bbp.cgr\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{host}}:{{port}}/api/v1/resume/inboxBbp",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"resume",
+								"inboxBbp"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Upload Práctica File",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "files",
+									"type": "file",
+									"src": "postman-cloud:///1f0037a6-3e37-45b0-af9e-249ffa8dfa7e"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://{{host}}:{{port}}/api/v1/resume/uploadFile?identityId={{identityId}}",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"resume",
+								"uploadFile"
+							],
+							"query": [
+								{
+									"key": "identityId",
+									"value": "{{identityId}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change Práctica Status to \"validacion\"",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"rol\": \"string\",\r\n  \"id\": 182\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{host}}:{{port}}/api/v1/resume/setValidateStatus/{{sAMAccountName}}",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"resume",
+								"setValidateStatus",
+								"{{sAMAccountName}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Save Práctica",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"fechaDiligenciamiento\": \"2025-03-18\",\r\n  \"entityCgr\": 1,\r\n  \"nombreDependenciaArea\": \"string\",    \r\n  \"nombre\": \"Prueba nombre\",\r\n  \"cargo\": \"Prueba cargo\",\r\n  \"correo\": \"pruebacorreo@algo.com\",\r\n  \"contacto\": \"1234567890\",\r\n  \"typeStrategyIdentification\": 1,\r\n  \"typePractice\": 4,\r\n  \"codigoPractica\": \"BP-1281\",\r\n  \"typology\": 1,\r\n  \"estadoFlujo\": \"evaluacion\",\r\n  \"levelGoodPractice\": 2,\r\n  \"nombreDescriptivoBuenaPractica\": \"Prueba nombre descriptivo\",\r\n  \"propositoPractica\": \"Prueba\",\r\n  \"objectiveMainPractice\": 1,\r\n  \"expectedImpact\": [\r\n    1,3\r\n  ],\r\n  \"metodologiaUsada\": \"Prueba metodologia\",\r\n  \"stagesMethodology\": [\r\n    1,2\r\n  ],\r\n  \"periodoDesarrolloInicio\": \"string\",\r\n  \"periodoDesarrolloFin\": \"25-03-01\",\r\n  \"typeMaterialProduced\": [\r\n    4,5,6\r\n  ],\r\n  \"supportReceived\": [\r\n    2,3\r\n  ],\r\n  \"recognitionsNationalInternational\": 2,\r\n  \"controlObject\": 2,\r\n  \"taxonomyEvent\": [\r\n    11,15\r\n  ],\r\n  \"typePerformance\": 1, \r\n  \"documentoActuacion\": \"\",\r\n  \"descripcionResultados\": \"Prueba\",\r\n  \"durationImplementation\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{host}}:{{port}}/api/v1/resume/save/{{sAMAccountName}}",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"resume",
+								"save",
+								"{{sAMAccountName}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Save Práctica",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"fechaDiligenciamiento\": \"2025-03-18\",\r\n  \"entityCgr\": 1,\r\n  \"nombreDependenciaArea\": \"string\",    \r\n  \"nombre\": \"Prueba nombre\",\r\n  \"cargo\": \"Prueba cargo\",\r\n  \"correo\": \"pruebacorreo@algo.com\",\r\n  \"contacto\": \"1234567890\",\r\n  \"typeStrategyIdentification\": 1,\r\n  \"typePractice\": 4,\r\n  \"codigoPractica\": \"BP-1281\",\r\n  \"typology\": 1,\r\n  \"estadoFlujo\": \"evaluacion\",\r\n  \"levelGoodPractice\": 2,\r\n  \"nombreDescriptivoBuenaPractica\": \"Prueba nombre descriptivo\",\r\n  \"propositoPractica\": \"Prueba\",\r\n  \"objectiveMainPractice\": 1,\r\n  \"expectedImpact\": [\r\n    1,3\r\n  ],\r\n  \"metodologiaUsada\": \"Prueba metodologia\",\r\n  \"stagesMethodology\": [\r\n    1,2\r\n  ],\r\n  \"periodoDesarrolloInicio\": \"string\",\r\n  \"periodoDesarrolloFin\": \"25-03-01\",\r\n  \"typeMaterialProduced\": [\r\n    4,5,6\r\n  ],\r\n  \"supportReceived\": [\r\n    2,3\r\n  ],\r\n  \"recognitionsNationalInternational\": 2,\r\n  \"controlObject\": 2,\r\n  \"taxonomyEvent\": [\r\n    11,15\r\n  ],\r\n  \"typePerformance\": 1, \r\n  \"documentoActuacion\": \"\",\r\n  \"descripcionResultados\": \"Prueba\",\r\n  \"durationImplementation\": 3\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://{{host}}:{{port}}/api/v1/resume/save/{{sAMAccountName}}",
+									"protocol": "http",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"v1",
+										"resume",
+										"save",
+										"{{sAMAccountName}}"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=ISO-8859-1"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 20 Mar 2025 15:01:06 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"mensaje\": \"El token expiro en -23 horas, -12 minutos y -57 segundos a las Wed Mar 19 10:48:09 COT 2025.\",\n    \"error\": \"Token no valido\",\n    \"statusCode\": 403\n}"
+						}
+					]
+				},
+				{
+					"name": "Partial Update of a Prueba and Traceability",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"actualizaciones\": {\r\n    \"additionalProp1\": {},\r\n    \"additionalProp2\": {},\r\n    \"additionalProp3\": {}\r\n  },\r\n  \"identityId\": 204,\r\n  \"comentarioUsuario\": \"Prueba\",\r\n  \"sAMAccountName\": \"bbp6.cgr\",\r\n  \"estadoFlujo\": \"caracterizada\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{host}}:{{port}}/api/v1/resume/updateIdentity/{{identityId}}",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"resume",
+								"updateIdentity",
+								"{{identityId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Práctica from DB and Local Storage",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://{{host}}:{{port}}/api/v1/resume/deleteById/{{identityId}}",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"resume",
+								"deleteById",
+								"{{identityId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Práctica",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"fechaDiligenciamiento\": \"2025-03-18\",\r\n  \"entityCgr\": 1,\r\n  \"nombreDependenciaArea\": \"Prueba\",    \r\n  \"nombre\": \"Prueba nombre\",\r\n  \"cargo\": \"Prueba cargo\",\r\n  \"correo\": \"pruebacorreo@algo.com\",\r\n  \"contacto\": \"1234567890\",\r\n  \"typeStrategyIdentification\": {\r\n    \"id\": 1,\r\n    \"name\": \"string\"\r\n  },\r\n  \"typePractice\": {\r\n    \"id\": 4,\r\n    \"name\": \"string\"\r\n  },\r\n  \"codigoPractica\": \"BP-1281\",\r\n  \"typology\": {\r\n    \"id\": 1,\r\n    \"name\": \"string\"\r\n  },\r\n  \"estadoFlujo\": \"evaluacion\",\r\n  \"levelGoodPractice\": 2,\r\n  \"nombreDescriptivoBuenaPractica\": \"Prueba nombre descriptivo\",\r\n  \"propositoPractica\": \"Prueba\",\r\n  \"objectiveMainPractice\": 1,\r\n  \"expectedImpact\": [\r\n    {\r\n      \"id\": 1,\r\n      \"name\": \"string\"\r\n    },\r\n    {\r\n      \"id\": 3,\r\n      \"name\": \"string\"\r\n    }\r\n  ],\r\n  \"metodologiaUsada\": \"Prueba metodologia\",\r\n  \"durationImplementation\": {\r\n    \"id\": 3,\r\n    \"name\": \"string\"\r\n  },\r\n  \"stagesMethodology\": [\r\n    {\r\n      \"id\": 1,\r\n      \"name\": \"string\"\r\n    },\r\n    {\r\n      \"id\": 2,\r\n      \"name\": \"string\"\r\n    }\r\n  ],\r\n  \"periodoDesarrolloInicio\": \"string\",\r\n  \"periodoDesarrolloFin\": \"25-03-01\",\r\n  \"typeMaterialProduced\": [\r\n    {\r\n      \"id\": 4,\r\n      \"name\": \"string\"\r\n    },\r\n    {\r\n      \"id\": 5,\r\n      \"name\": \"string\"\r\n    },\r\n    {\r\n      \"id\": 6,\r\n      \"name\": \"string\"\r\n    }\r\n  ],\r\n  \"supportReceived\": [\r\n    {\r\n      \"id\": 2,\r\n      \"name\": \"string\"\r\n    },\r\n    {\r\n      \"id\": 3,\r\n      \"name\": \"string\"\r\n    }\r\n  ],\r\n  \"recognitionsNationalInternational\": {\r\n    \"id\": 2,\r\n    \"name\": \"string\"\r\n  },\r\n  \"controlObject\": {\r\n    \"id\": 2,\r\n    \"name\": \"string\"\r\n  },\r\n  \"taxonomyEvent\": [\r\n    {\r\n      \"id\": 11,\r\n      \"name\": \"string\"\r\n    },\r\n    {\r\n      \"id\": 15,\r\n      \"name\": \"string\"\r\n    }\r\n  ],\r\n  \"typePerformance\": {\r\n    \"id\": 1,\r\n    \"name\": \"string\"\r\n  }, \r\n  \"documentoActuacion\": \"\",\r\n  \"descripcionResultados\": \"Prueba\",\r\n  \"files\":[\r\n    {\r\n      \"id\": 1123,\r\n      \"path\": \"string\",\r\n      \"name\": \"string\"\r\n    }\r\n  ],\r\n  \"traceabilityEntities\":[\r\n    {\r\n      \"id\": 20793\r\n    }\r\n  ],\r\n  \"formRecords\":[\r\n    {\r\n      \"id\": 22395\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{host}}:{{port}}/api/v1/resume/updateIdentity/{{identityId}}",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"resume",
+								"updateIdentity",
+								"{{identityId}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Role",
+			"item": [
+				{
+					"name": "Get All Roles",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{host}}:{{port}}/api/v1/role",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"role"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Role By Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{host}}:{{port}}/api/v1/role/{{roleId}}",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"role",
+								"{{roleId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Role",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"15\",\r\n    \"name\":\"prueba\",\r\n    \"enable\":\"true\",\r\n    \"description\":\"Texto de prueba\",\r\n    \"date_create\":\"2025-03-17 5:11:50\",\r\n    \"date_modify\":\"2025-03-17 5:11:50\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{host}}:{{port}}/api/v1/role",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"role"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Role",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"15\",\r\n    \"name\":\"prueba update\",\r\n    \"enable\":\"false\",\r\n    \"description\":\"Texto de prueba\",\r\n    \"date_create\":\"2025-03-17 5:11:50\",\r\n    \"date_modify\":\"2025-03-17 5:11:50\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{host}}:{{port}}/api/v1/role",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"role"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Role",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://{{host}}:{{port}}/api/v1/role/{{roleId}}",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"role",
+								"{{roleId}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Traceability",
+			"item": [
+				{
+					"name": "Get User of Traceability By Id Práctica and Id State",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{host}}:{{port}}/api/v1/traceability/{{idIdentity}}/{{idState}}",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"traceability",
+								"{{idIdentity}}",
+								"{{idState}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get similarity of a field of Identificacion table",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Proposito_Practica\": \"en español se traduce como Procesamiento del Lenguaje Natural, Es una tecnología de aprendizaje\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{host}}:{{port}}/api/v1/traceability/compare",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"traceability",
+								"compare"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create traceability",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"user\": 30044,\r\n  \"identity\": 1279,\r\n  \"stateFlow\": \"descartada\",\r\n  \"fechaDiligenciamiento\": \"2025-03-19\",\r\n  \"comentarioUsuario\": \"prueba\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{host}}:{{port}}/api/v1/traceability",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"traceability"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Get user by Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{host}}:{{port}}/api/v1/user/{{userId}}",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"{{userId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Users",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{host}}:{{port}}/api/v1/user",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Check system syncronize with Directorio Activo",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{host}}:{{port}}/api/v1/user/synchronize",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"synchronize"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get image User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{host}}:{{port}}/api/v1/user/profile_image/{{userId}}",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"profile_image",
+								"{{userId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find Users Aplying Filters",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\":\"bbp1.cgr\",\r\n    \"fullName\":\"bbp\",\r\n    \"email\":\"bbp.cgr@tecser.local\",\r\n    \"phone\":null,\r\n    \"enabled\":true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{host}}:{{port}}/api/v1/user/filter",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"filter"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Users By Role",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{host}}:{{port}}/api/v1/user/cargo/{{cargo}}",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"cargo",
+								"{{cargo}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sAMAccountName\":\"bbp20.cgr\",\r\n    \"password\":\"123abc\",\r\n    \"fullName\":\"bbp20.cgr\",\r\n    \"email\":\"bbp20.cgr@tecser.local\",\r\n    \"phone\":\"1234567890\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{host}}:{{port}}/api/v1/user/createUser",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"createUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Upload User Image",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "postman-cloud:///1f0037a6-3e37-45b0-af9e-249ffa8dfa7e"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://{{host}}:{{port}}/api/v1/user/upload_image/{{userId}}",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"upload_image",
+								"{{userId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Assign User Roles",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idUser\":\"30052\",\r\n    \"roleIds\":[1,2,3]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{host}}:{{port}}/api/v1/user",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\":\"123abc\",\r\n    \"fullName\":\"bbp20.cgr\",\r\n    \"email\":\"bbp20.cgr@tecser.local\",\r\n    \"phone\":\"0987654321\",\r\n    \"dateModify\":\"2025-03-17 5:11:50\",\r\n    \"dateCreated\":\"2025-03-17 3:11:50\",\r\n    \"enabled\":\"true\",\r\n    \"rolesIds\":[5],\r\n    \"cargo\":\"validador\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{host}}:{{port}}/api/v1/user/{{userId}}",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"{{userId}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "log-controller",
+			"item": [
+				{
+					"name": "Api-Log",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5500/api/v1/log",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5500",
+							"path": [
+								"api",
+								"v1",
+								"log"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "menu-controller",
+			"item": [
+				{
+					"name": "Menu-List",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5500/api/v1/menu/list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5500",
+							"path": [
+								"api",
+								"v1",
+								"menu",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Menu-health",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:5500/api/v1/menu/health",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5500",
+							"path": [
+								"api",
+								"v1",
+								"menu",
+								"health"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "notification-type-controller",
+			"item": [
+				{
+					"name": "GetByName-test",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Respuesta\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5500/api/v1/notification/notification-types/GetByName/Respuesta",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5500",
+							"path": [
+								"api",
+								"v1",
+								"notification",
+								"notification-types",
+								"GetByName",
+								"Respuesta"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "notification-types",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Respuesta\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5500/api/v1/notification/notification-types/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5500",
+							"path": [
+								"api",
+								"v1",
+								"notification",
+								"notification-types",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "notification-types-id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":10\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5500/api/v1/notification/notification-types/{{id}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5500",
+							"path": [
+								"api",
+								"v1",
+								"notification",
+								"notification-types",
+								"{{id}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "form-record-controller",
+			"item": [
+				{
+					"name": "admin-record",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idForm\": 0,\r\n    \"idIdentity\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5500/api/v1/admin/record/{{idForm}}/{{idIdentity}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5500",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"record",
+								"{{idForm}}",
+								"{{idIdentity}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List-evo",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"formEntity\": 2,\r\n  \"user\": 30033,\r\n  \"comentario\": [\r\n    null\r\n  ],\r\n  \"questionAnswer\": [\r\n    1\r\n  ],\r\n  \"questionEntity\": [\r\n    1\r\n  ],\r\n  \"evolucion\": [\r\n    null\r\n  ],\r\n  \"uso\": [\r\n    null\r\n  ],\r\n  \"beneficio\": [\r\n    null\r\n  ],\r\n  \"identity\": 188,\r\n  \"enabled\": true,\r\n  \"estimacion\": \"enviada\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5500/api/v1/admin/record/list/evo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5500",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"record",
+								"list",
+								"evo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create-Record",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"formEntity\": 3,\r\n  \"user\": 30033,\r\n  \"comentario\": \"puede pasar-62\",\r\n  \"questionAnswer\": 1,\r\n  \"questionEntity\": 30,\r\n  \"identity\": 1281,\r\n  \"enabled\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5500/api/v1/admin/record",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5500",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"record"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"formEntity\": 2,\r\n  \"user\": 30033,\r\n  \"comentario\": [\r\n    null\r\n  ],\r\n  \"questionAnswer\": [\r\n    1\r\n  ],\r\n  \"questionEntity\": [\r\n    1\r\n  ],\r\n  \"evolucion\": [\r\n    null\r\n  ],\r\n  \"uso\": [\r\n    null\r\n  ],\r\n  \"beneficio\": [\r\n    null\r\n  ],\r\n  \"identity\": 188,\r\n  \"enabled\": true,\r\n  \"estimacion\": \"enviada\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5500/api/v1/admin/record/list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5500",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"record",
+								"list"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "file-audit-controller",
+			"item": [
+				{
+					"name": "admin-record-id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5500/api/v1/audit/{{auditId}}/files/getAll",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5500",
+							"path": [
+								"api",
+								"v1",
+								"audit",
+								"{{auditId}}",
+								"files",
+								"getAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get-admin-record-id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "files",
+									"type": "file",
+									"src": "postman-cloud:///1f00433e-e18e-4ee0-bb23-ff64208c48ce"
+								},
+								{
+									"key": "auditId",
+									"value": "46",
+									"type": "text"
+								},
+								{
+									"key": "dateAudit",
+									"value": "2025-02-20 09:08:10.170000",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5500/api/v1/audit/{{auditId}}/files/upload",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5500",
+							"path": [
+								"api",
+								"v1",
+								"audit",
+								"{{auditId}}",
+								"files",
+								"upload"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "audit-notification-base-controller",
+			"item": [
+				{
+					"name": "GetAllAuditNotifications",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5500/api/v1/auditNotificationsBase/getAll",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5500",
+							"path": [
+								"api",
+								"v1",
+								"auditNotificationsBase",
+								"getAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SaveAuditNotifications",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"auditId\": 20,\r\n  \"subject\": \"Prueba II sinedin\",\r\n  \"body\": \"mensaje de prueba II\",\r\n  \"userIds\": [\r\n    30034,\r\n    30033\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5500/api/v1/auditNotificationsBase/save",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5500",
+							"path": [
+								"api",
+								"v1",
+								"auditNotificationsBase",
+								"save"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "audit-controller",
+			"item": [
+				{
+					"name": "calculate-periodicity",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{host}}:{{port}}/api/v1/audit/calculate-periodicity/{{idAudit}}",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"audit",
+								"calculate-periodicity",
+								"{{idAudit}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Audit-count",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{host}}:{{port}}/api/v1/audit/count",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"audit",
+								"count"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getByGroup",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"group\":2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{host}}:{{port}}/api/v1/audit/getByGroup/{{group}}",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"audit",
+								"getByGroup",
+								"{{group}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getByIdentity",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"group\":2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{host}}:{{port}}/api/v1/audit/getIdentity/{{idIdentity}}",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"audit",
+								"getIdentity",
+								"{{idIdentity}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get-progress",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"group\":2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{host}}:{{port}}/api/v1/audit/{{idAudit}}/progress",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"audit",
+								"{{idAudit}}",
+								"progress"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get-auditById",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"group\":2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{host}}:{{port}}/api/v1/audit/{{idAudit}}",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"audit",
+								"{{idAudit}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "put-audit",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"identityId\": 1280,\r\n  \"auditCode\": \"string\",\r\n  \"startDate\": \"2025-03-18T22:08:11.335Z\",\r\n  \"endDate\": \"2025-03-18T22:08:11.335Z\",\r\n  \"state\": true,\r\n  \"groupId\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{host}}:{{port}}/api/v1/audit/save",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"audit",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-All-audit",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"identityId\": 1280,\r\n  \"auditCode\": \"string\",\r\n  \"startDate\": \"2025-03-18T22:08:11.335Z\",\r\n  \"endDate\": \"2025-03-18T22:08:11.335Z\",\r\n  \"state\": true,\r\n  \"groupId\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{host}}:{{port}}/api/v1/audit",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"audit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post-audit-ByEmail",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"identity\": 1280,\r\n  \"startDate\": \"2025-03-18T22:11:30.899Z\",\r\n  \"endDate\": \"2025-03-18T22:11:30.899Z\",\r\n  \"state\": true,\r\n  \"group\": 3,\r\n  \"subject\": \"string\",\r\n  \"body\": \"string\",\r\n  \"correosUsers\": [\r\n    \"usuario1@bbp.cgr\"\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{host}}:{{port}}/api/v1/audit",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"audit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar-audit",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"group\":2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{host}}:{{port}}/api/v1/audit/{{idAudit}}",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"audit",
+								"{{idAudit}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "spell-checker",
+			"item": [
+				{
+					"name": "Correct text",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"text\": \"prueva\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{host}}:{{port}}/api/v1/correction",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"correction"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "email-controller",
+			"item": [
+				{
+					"name": "EnviarEmail",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"recipients\": [\r\n    9007199254740991\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{host}}:{{port}}/api/v1/email/sendId",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"email",
+								"sendId"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "notification-controller",
+			"item": [
+				{
+					"name": "notificationById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{host}}:{{port}}/api/v1/notification/byTypeId/{{typeId}}",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"notification",
+								"byTypeId",
+								"{{typeId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "notifications-By sAMAccountName",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sAMAccountName\":\"bbp.cgr\",\r\n    \"notification\":[]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{host}}:{{port}}/api/v1/notification/{{sAMAccountName}}",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"notification",
+								"{{sAMAccountName}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit-Notifications",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"enabled\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{host}}:{{port}}/api/v1/notification/edit/{{idNotification}}",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"notification",
+								"edit",
+								"{{idNotification}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post-notifications",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"expanded\": true,\r\n  \"icon\": \"string\",\r\n  \"image\": \"string\",\r\n  \"title\": \"string\",\r\n  \"description\": \"string\",\r\n  \"time\": \"2025-03-19 15:18:53.883\",\r\n  \"link\": \"string\",\r\n  \"useRouter\": true,\r\n  \"enabled\": true,\r\n  \"message\": \"string\",\r\n  \"notificationType\": 13,\r\n  \"userDetails\": {\r\n    \"sAMAccountName\": \"bbp.cgr\",\r\n    \"resumeId\": \"30046\"\r\n  },\r\n  \"readOnly\": true,\r\n  \"sAMAccountName\": \"bbp.cgr\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{host}}:{{port}}/api/v1/notification",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"notification"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get-notifications",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{host}}:{{port}}/api/v1/notification",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"notification"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "editReadOnly",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"enabled\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{host}}:{{port}}/api/v1/notification/editReadOnly/{{idNotification}}",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"notification",
+								"editReadOnly",
+								"{{idNotification}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "audit-group-controller",
+			"item": [
+				{
+					"name": "audit/groups/getGroupAndUsers",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{jwt}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5500/api/v1/audit/groups/getGroupAndUsers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5500",
+							"path": [
+								"api",
+								"v1",
+								"audit",
+								"groups",
+								"getGroupAndUsers"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
